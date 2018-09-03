@@ -44,6 +44,10 @@ services:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+      - '--no-collector.sockstat'
+      - '--no-collector.netstat'
+      - '--no-collector.timex'
+      - '--no-collector.vmstat'
     restart: unless-stopped
     expose:
       - 9100
