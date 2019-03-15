@@ -90,7 +90,7 @@ services:
       - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s:/grafana/
     restart: unless-stopped
     ports:
-      - "80:3000"
+      - "3000:3000"
     networks:
       - monitor-net
     labels:
